@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "EventCrush - Registrer Privatbruger";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 right-content">
+            <img src="/Content/img/logo.png" class="animated bounceInDown">
+        </div>
+        <div class="col-md-8 center-content">
+            <h3 class="">Opret Konto</h3><br>
+            <span>
+                Med en bruger på EventCrush får du flere muligheder, som f.eks. muligheden for at oprette events!<br>
+                Det tager kun 2 minutter, så er du klar!
+            </span>
+            <br /><br />
+            <a href="@Url.Action("CorporateUser", "Create")" class="button button-big"><img src="@Url.Content("~/Content/img/ui-icon/corporate-w.png")" style="height: 35px; margin-top: -6px;" /> Erhvervskunde, tryk her!</a>
+            <br /><br />
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <form id="PrivateUser">
+                <div class="form-group">
+                    <label class="sr-only">Fornavn</label>
+                    <input name="Fornavn" type="text" class="form-control-1" placeholder="Fornavn *" required>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only">Efternavn</label>
+                    <input name="Efternavn" type="text" class="form-control-1" placeholder="Efternavn *" required>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only">Email</label>
+                    <input name="Email" type="Email" class="form-control-1" placeholder="Email *" required>
+                </div>
+                <script> $('.datepicker').datepicker({ language: "da", orientation: "bottom auto" });</script>
+                <div class="form-group">
+                    <label class="sr-only">Fødselsdag</label>
+                    <input name="Fødselsdag" class="datepicker form-control-1" placeholder="Fødselsdag *" required data-provide="datepicker" data-date-clearbtn="true" data-date-autoclose="true" data-date-format="mm/dd/yyyy">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only">Password</label>
+                    <input name="Password" type="password" class="form-control-1" placeholder="Kodeord *">
+                </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="sr-only">Vejnavn</label>
+                <input name="Vejnavn" type="text" class="form-control-1" placeholder="Vejnavn *">
+            </div>
+            <div class="form-group">
+                <label class="sr-only">Vejnummer</label>
+                <input name="Vejnummer" type="number" class="form-control-1" placeholder="Vejnummer *">
+            </div>
+            <div class="form-group">
+                <label class="sr-only">By</label>
+                <input name="By" type="text" class="form-control-1" placeholder="By *">
+            </div>
+            <div class="form-group">
+                <label class="sr-only">Postnummer</label>
+                <input name="Postnummer" type="text" class="form-control-1" placeholder="Postnummer *" required>
+            </div>
+            <div class="form-group">
+                <label class="sr-only">Land</label>
+                <input name="Land" type="text" class="form-control-1" placeholder="Land *">
+            </div>
+            <div class="form-group">
+                <label class="sr-only">Telefonnummer</label>
+                <input name="Telefonnummer" type="number" class="form-control-1" placeholder="Telefonnummer">
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $("#Submit1").on("click", function (e) {
+                        $.ajax({
+                            type: "POST",
+                            url: '@Url.Action("Submit", "Create")',
+                            data: $('#PrivateUser').serialize(),
+                            datatype: "json",
+                            success: function (data) {
+                                $('#result').html(data)
+                            }
+                        });
+                        e.preventDefault(); //prevent the form from submitting
+                    });
+                });
+            </script>
+            <button type="submit" id="Submit1" value="Submit">Opret Bruger</button>
+            * Skal udfyldes
+        </div>
+        </form>
+
+        <div class="col-md-2"></div>
+    </div>
+</div>
+<!-- Content: End -->

@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "EventCrush - Find Event";
+}
+
+<!-- Content: Start -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 right-content"><img src="~/Content/img/logo.png" class="animated bounceInDown"></div>
+        <div class="col-md-8 center-content">
+            <a href="@Url.Action("PrivateUser","Create")" class="button button-big" style="margin-right:50px"><img src="@Url.Content("~/Content/img/ui-icon/map-w.png")" style="height:35px;margin-top:1px;" /> Find Events på Kort</a>
+            <a href="@Url.Action("PrivateUser","Create")" class="button button-big"><img src="@Url.Content("~/Content/img/ui-icon/category-w.png")" style="height:35px;margin-top:-4px;" /> Se Kategorier</a>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row" style="margin-top:100px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 center-content">
+            <form class="form-inline">
+                <div class="form-group" style="width:80%;">
+                    <label class="sr-only">Søg efter Postnummer</label>
+                    <input type="zip" class="form-control-1" placeholder="Søg efter Postnummer" required>
+                </div>
+                <button type="submit" class="button"><img src="~/Content/img/ui-icon/search-w.png" style="height:35px;"></button>
+            </form>
+            <div class="col-md-3"></div>
+        </div>
+    </div>

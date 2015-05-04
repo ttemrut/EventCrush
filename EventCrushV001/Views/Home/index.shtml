@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "EventCrush - Forside";
+}
+<!-- Content: Start -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 center-content"><img src="Content/img/logo.png" class="animated bounceInDown"><h1 class="animated fadeIn">Velkommen til EventCrush,<br>Hvad har du lyst til?</h1></div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="row" style="margin-top:100px;">
+        <div class="col-md-3 animated fadeIn">
+            <div class="card hvr-curl-top-left">
+                <div class="card--media">
+                    <a href="#">
+                        <img src="Content/img/category/koncert.jpg" class="card--media--image" />
+                        <div class="card--bottom"></div>
+                        <img src="Content/img/category-icon/music.png" class="card--media--icon" />
+                        <h3 class="card--headline">Koncert</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 animated fadeIn center-content">
+            <div class="card hvr-curl-top-left">
+                <div class="card--media">
+                    <a href="#">
+                        <img src="Content/img/category/sport.jpg" class="card--media--image" />
+                        <div class="card--bottom"></div>
+                        <img src="Content/img/category-icon/sport.png" class="card--media--icon" />
+                        <h3 class="card--headline">Sport</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 animated fadeIn center-content">
+            <div class="card hvr-curl-top-left">
+                <div class="card--media">
+                    <a href="#">
+                        <img src="Content/img/category/market.jpg" class="card--media--image" />
+                        <div class="card--bottom"></div>
+                        <img src="Content/img/category-icon/market.png" class="card--media--icon" />
+                        <h3 class="card--headline">Marked</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 animated fadeIn center-content">
+            <div class="card hvr-curl-top-left">
+                <div class="card--media">
+                    <a href="#">
+                        <img src="Content/img/category/science.jpg" class="card--media--image" />
+                        <div class="card--bottom"></div>
+                        <img src="Content/img/category-icon/science.png" class="card--media--icon" />
+                        <h3 class="card--headline">Videnskab</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Content: End -->

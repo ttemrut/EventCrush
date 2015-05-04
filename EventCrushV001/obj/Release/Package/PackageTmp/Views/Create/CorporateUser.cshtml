@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "EventCrush - Registrer Privatbruger";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 right-content"><img src="/Content/img/logo.png" class="animated bounceInDown"></div>
+        <div class="col-md-8 center-content">
+            <h3 class="">Opret Erhvervskonto</h3><br>
+            <span>
+                Med en bruger på EventCrush får du flere muligheder, som f.eks. muligheden for at oprette events!<br>
+                Det tager kun 2 minutter, så er du klar!
+            </span>
+            <br /><br />
+            <a href="@Url.Action("PrivateUser","Create")" class="button button-big"><img src="@Url.Content("~/Content/img/ui-icon/back-w.png")" style="height:35px;margin-top:-3px;" /> Privatkunde, tryk her!</a>
+            <br />
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <form>
+                <div class="form-group">
+                    <label class="sr-only">Firmanavn</label>
+                    <input type="text" class="form-control-1" placeholder="Firmanavn *" required>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only">Kontaktperson</label>
+                    <input type="text" class="form-control-1" placeholder="Kontaktperson *" required>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only">Email</label>
+                    <input type="Email" class="form-control-1" placeholder="Email *" required>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only">CVR</label>
+                    <input type="number" class="form-control-1" placeholder="CVR *" required>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only">Password</label>
+                    <input type="password" class="form-control-1" placeholder="Kodeord *">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only">Telefonnummer</label>
+                    <input type="number" class="form-control-1" placeholder="Telefonnummer">
+                </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="sr-only">Vejnavn</label>
+                <input type="number" class="form-control-1" placeholder="Vejnavn *">
+            </div>
+            <div class="form-group">
+                <label class="sr-only">Vejnummer</label>
+                <input type="number" class="form-control-1" placeholder="Vejnummer *">
+            </div>
+            <div class="form-group">
+                <label class="sr-only">By</label>
+                <input type="text" class="form-control-1" placeholder="By *">
+            </div>
+            <div class="form-group">
+                <label class="sr-only">Postnummer</label>
+                <input type="number" class="form-control-1" placeholder="Postnummer *" required>
+            </div>
+            <div class="form-group">
+                <label class="sr-only">Land</label>
+                <input type="text" class="form-control-1" placeholder="Land *">
+            </div>
+            <br />
+            <div class="form-group">
+                <label class="sr-only">Logo</label>
+                <input id="input-21" type="file" accept="image/*">
+                <script>
+                    /* Initialize your widget via javascript as follows */
+                    $("#input-21").fileinput({
+                        previewFileType: "image",
+                        browseClass: "btn btn-success",
+                        browseLabel: "Vælg Logo",
+                        removeClass: "btn btn-danger",
+                        removeLabel: "Delete",
+                    });
+                </script>
+            </div>
+            <button type="submit" class="button">Opret Erhvervsbruger</button>
+            * Skal udfyldes
+        </div>
+        </form>
+
+        <div class="col-md-2"></div>
+
+
+    </div>
+</div>
+<!-- Content: End -->
