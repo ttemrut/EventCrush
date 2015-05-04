@@ -35,7 +35,7 @@ namespace EventCrush.Controllers
             var con = GetDefaultConnection();
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "insert into Private_User(Username,PW,FirstName,LastName,Email,PhoneNumber) values (@Username, @PW, @FirstName, @LastName, @Email, @PhoneNumber)";
+            cmd.CommandText = "insert into private_user(Username,PW,FirstName,LastName,Email,PhoneNumber) values (@Username, @PW, @FirstName, @LastName, @Email, @PhoneNumber)";
             cmd.Prepare();
             cmd.Parameters.AddWithValue("@Username", Brugernavn);
             cmd.Parameters.AddWithValue("@PW", Password);
@@ -44,9 +44,9 @@ namespace EventCrush.Controllers
             cmd.Parameters.AddWithValue("@Email", Email);
             cmd.Parameters.AddWithValue("@PhoneNumber", Telefonnummer);
             cmd.ExecuteNonQuery();
-            cmd.CommandText = "insert into address(Road, Zip, Town, Country, RoadNumber) values (@Road, @Zip, @Town, @Country, @RoadNumber)";
+            cmd.CommandText = "insert into address(Road, ZipCode, Town, Country, RoadNumber) values (@Road, @ZipCode, @Town, @Country, @RoadNumber)";
             cmd.Parameters.AddWithValue("@Road", Vejnavn);
-            cmd.Parameters.AddWithValue("@Zip", Postnummer);
+            cmd.Parameters.AddWithValue("@ZipCode", Postnummer);
             cmd.Parameters.AddWithValue("@Town", By);
             cmd.Parameters.AddWithValue("@Country", Land);
             cmd.Parameters.AddWithValue("@RoadNumber", Vejnummer);
